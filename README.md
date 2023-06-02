@@ -26,7 +26,7 @@ The data was sourced from kaggle and cleaned using a personal Python script.
 
 To install and use this project, follow these steps:
 
-1. Clone the repository: `[git clone https://github.com/your-username/project-name.git](https://github.com/haha5751/DatasetApp.git)`
+1. Clone the repository: `[git clone https://github.com/haha5751/DatasetApp.git]`
 2. Navigate to the project directory: `cd DatasetApp`
 3. Install the dependencies: `poetry install`
 5. Make the migrations: `poetry run python manage.py makemigrations`
@@ -49,7 +49,7 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 
 ## License
 
-This project is licensed under the [GPL 2](./LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
+This project is licensed under the [GPL 2](./LICENSE) License. Feel free to use, modify, and distribute it as per the terms of the license.
 
 ## Acknowledgements
 
