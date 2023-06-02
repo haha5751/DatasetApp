@@ -14,15 +14,15 @@ html, body, div, p, ul, li {
 }
 
 .nav {
-  height: 60px; /* set same as height & line-height below */
+  height: 60px; 
 }
 
 .nav li {
   display: inline-block;
   list-style: none;
-  height: 60px; /* should be the same as line-height */
+  height: 60px; 
   line-height: 60px; 
-  padding: 0 40px; /* "0" sets top and bottom padding to none */
+  padding: 0 40px; 
   font-size: 30px;
 }
 
@@ -35,8 +35,6 @@ input[type="submit"]
 {
     background: rgba(0, 0, 0, 0);
     border: #AAA694;
-    /* outline-style: solid;
-    outline-width: 2px; */
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -94,6 +92,6 @@ input[type="text"],
   font-style: normal;
   font-variant: normal;
   text-transform: none;
-  outline: none;
+  outline: none; 
 }
 /* credit : https://codepen.io/dmullerd/pen/GpbdXM */

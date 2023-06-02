@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from .models import AirPollution
 from .forms import myForm
-# import numpy as np
+import numpy as np
 from io import StringIO
 import matplotlib.pyplot as plt
 import matplotlib
@@ -34,13 +34,12 @@ def return_graph(x, y, countryName, filterSelection):
     plt.title(countryName)
     plt.xlabel("City")
     plt.ylabel(filterSelection)
-    # plt.xticks(fontsize = -(-17)//len(x)) # use an exponential decay function to set the size
-    plt.xticks(fontsize = 10)
+    plt.xticks(fontsize = np.ceil(abs(-0.5 * len(x) + 14))) # use an exponential decay function to set the size
     plt.gca().spines["top"].set_color(COLOR)
     plt.gca().spines["bottom"].set_color(COLOR)
     plt.gca().spines["left"].set_color(COLOR)
     plt.gca().spines["right"].set_color(COLOR)
-    if len(x) > 25:
+    if len(x) > 22:
         plt.gca().axes.get_xaxis().set_ticks([])
     imgdata = StringIO()
     fig.savefig(imgdata, format='svg', transparent=True)

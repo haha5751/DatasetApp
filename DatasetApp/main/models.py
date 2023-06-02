@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-
-# Create your models here.
 class AirPollution (models.Model):
     country = models.CharField(_("Country"), max_length = 60)
     city = models.CharField(_("City"), max_length = 90)
