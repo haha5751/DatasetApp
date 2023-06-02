@@ -1,0 +1,99 @@
+html, body, div, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #AAA694;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.nav {
+  height: 60px; /* set same as height & line-height below */
+}
+
+.nav li {
+  display: inline-block;
+  list-style: none;
+  height: 60px; /* should be the same as line-height */
+  line-height: 60px; 
+  padding: 0 40px; /* "0" sets top and bottom padding to none */
+  font-size: 30px;
+}
+
+.nav-link {
+  color: #AAA694;
+  text-decoration: none;
+}
+
+input[type="submit"]
+{
+    background: rgba(0, 0, 0, 0);
+    border: #AAA694;
+    /* outline-style: solid;
+    outline-width: 2px; */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #AAA694;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+form {
+  background-color: #2B2C28;
+  border-color: #AAA694; 
+}
+input[type="text"],
+  textarea {
+    background: #2B2C28;
+    border: 1px solid #AAA694;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #AAA694;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    outline: none;
+}
+
+.transparent-dropdown {
+  background: #2B2C28;
+  border: 1px solid #AAA694;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #AAA694;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  outline: none;
+}
+
+.transparent-dropdown option {
+  background: #2B2C28;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #AAA694;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  outline: none;
+}
+/* credit : https://codepen.io/dmullerd/pen/GpbdXM */

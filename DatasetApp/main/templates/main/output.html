@@ -1,0 +1,15 @@
+{% extends "main/navbar.html" %}
+{% block content %}
+
+<div style = "padding: 0 40px">
+
+  <form action="{% url 'output' %}" method="post"> {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+  
+  <p> </br> {{error}} </p>
+  {{ graphic|safe }}
+
+</form>
+</div>
+{% endblock %}

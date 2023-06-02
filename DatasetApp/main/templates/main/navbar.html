@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Set App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <style>
+      {% comment %} form {
+          background-color: #2B2C28;
+      }
+  
+      input[type="text"],
+      textarea {
+          background: #2B2C28;
+          border: 1px solid #AAA694;
+          font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          color: #AAA694;
+          font-weight: normal;
+          text-decoration: none;
+          font-style: normal;
+          font-variant: normal;
+          text-transform: none;
+      } {% endcomment %}
+  </style>
+  </head>
+  <body style = "background-color: #2B2C28">
+    <div class="nav">
+      <ul>
+        <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+        <li><a href="{% url 'output' %}" class="nav-link">Output</a></li>
+      </ul>
+    </div>
+
+    <div>
+    </br>
+      {% block content %}
+      
+      {% endblock %}
+    </div>
+    </body>
+</html>
+
+
