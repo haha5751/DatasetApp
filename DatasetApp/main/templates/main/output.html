@@ -2,14 +2,26 @@
 {% block content %}
 
 <div style = "padding: 0 40px">
-
   <form action="{% url 'output' %}" method="post"> {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
-  
   <p> </br> {{error}} </p>
-  {{ graphic|safe }}
-
-</form>
+  </form>
+  <div>
+    <div style="display: inline-block"> 
+     <img> {{ graphic|safe }} </img>
+    </div>
+    <div style="display: inline-block" class="centered-element"> 
+      {% if stats %}
+        <p> {{stats.0}} has the highest {{selection}} at {{stats.1}}.</p>
+      </br>
+        <p> {{stats.2}} has the lowest {{selection}} at {{stats.3}}.</p>
+      </br>
+        <p> The mean {{selection}} is {{stats.4}}.</p>
+      </br>
+        <p> The standard deviation of the {{selection}}s is {{stats.5}}.</p>
+      {% endif %}
+    </div>
+  </div>
 </div>
 {% endblock %}

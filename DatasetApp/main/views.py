@@ -1,4 +1,3 @@
-# from django.http import HttpResponse
 from django.shortcuts import render
 from .models import AirPollution
 from .forms import myForm
@@ -7,6 +6,16 @@ from io import StringIO
 import matplotlib.pyplot as plt
 import matplotlib
 
+def get_stats(x, y):
+    data = [0] * 6
+    array = np.array(y)
+    data[0] = x[int(np.argmax(array))]
+    data[1] = np.max(y)
+    data[2] = x[int(np.argmin(array))]
+    data[3] = np.min(y)
+    data[4] = round(np.mean(y), 2)
+    data[5] = round(np.std(y), 2)
+    return data
 
 def return_graph(x, y, countryName, filterSelection):
     match filterSelection:
@@ -46,7 +55,7 @@ def return_graph(x, y, countryName, filterSelection):
     imgdata.seek(0)
     plt.close()
     data = imgdata.getvalue()
-    return data
+    return data, filterSelection
 
 def home(request):
     temp = 0
@@ -68,7 +77,8 @@ def output(request):
         except:
             context = {'error' : 'The text entered is not a country within the data set, please try again.', 'form' : form}
             return render(request, 'main/output.html', context)
-        graphic = return_graph(x, y, input, inputTwo)
-        context = {'graphic' : graphic, 'form' : form}
+        graphic, selection = return_graph(x, y, input, inputTwo)
+        stats = get_stats(x, y)
+        context = {'graphic' : graphic, 'form' : form, 'stats' : stats, 'selection' : selection}
         return render(request, 'main/output.html', context) 
     return render(request, 'main/output.html', context)

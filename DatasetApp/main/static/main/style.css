@@ -94,4 +94,14 @@ input[type="text"],
   text-transform: none;
   outline: none; 
 }
+
+.centered-element {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
 /* credit : https://codepen.io/dmullerd/pen/GpbdXM */
