@@ -58,16 +58,14 @@ def return_graph(x, y, countryName, filterSelection):
     return data, filterSelection
 
 def home(request):
-    temp = 0
-    context = {"temp" : temp,}
-    return render(request, "main/home.html", context)
+    return render(request, "main/home.html")
 
 def output(request):
     form = myForm
     context = {'form' : form}
     if request.method == 'POST':
         try:
-            input = str(request.POST.get('selection')).lower().title()
+            input = AirPollution.objects.values_list('country', flat = True).distinct().filter(country__icontains = str(request.POST.get('selection')))[0]
             inputTwo = str(request.POST.get('filterSelection')).lower()
             x = AirPollution.objects.values_list('city', flat = True).filter(country = input)
             y = AirPollution.objects.values_list(inputTwo, flat = True).filter(country = input)

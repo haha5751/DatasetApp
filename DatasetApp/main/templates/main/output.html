@@ -5,7 +5,9 @@
   <form action="{% url 'output' %}" method="post"> {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
-  <p> </br> {{error}} </p>
+  {% if error %}
+    <p> </br> {{error}} </p>
+  {% endif %}
   </form>
   <div>
     <div style="display: inline-block"> 

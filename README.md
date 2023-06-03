@@ -29,19 +29,21 @@ To install and use this project, follow these steps:
 1. Clone the repository: `[git clone https://github.com/haha5751/DatasetApp.git]`
 2. Navigate to the project directory: `cd DatasetApp`
 3. Install the dependencies: `poetry install`
-5. Make the migrations: `poetry run python manage.py makemigrations`
-6. Execute the migrations: `poetry run python manage.py migrate`
-7. Start the application: `poetry run python manage.py runserver`
-8. Go to the address provided: `http://XXX.X.X.X:XXXX/` 
+4. Load the data set into PostgreSQL: `https://www.kaggle.com/datasets/adityaramachandran27/world-air-quality-index-by-city-and-coordinates`
+5. A cleaned version of the data set can be found [here](./Data/cleaneddata.zip)
+6. Enter in your credentials into settings.py: `DatasetApp/DatasetApp/project/settings.py` under DATABASES
+7. Make the migrations: `poetry run python manage.py makemigrations`
+8. Execute the migrations: `poetry run python manage.py migrate`
+9. Start the application: `poetry run python manage.py runserver`
+10. Go to the address provided: `http://XXX.X.X.X:XXXX/` 
 
 ## Usage
 
 After installation, you can use the project as follows:
 
-1. Load the data set into PostgreSQL: `https://www.kaggle.com/datasets/adityaramachandran27/world-air-quality-index-by-city-and-coordinates`
-2. The data set must have rows containing null values removed: `https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html`
-3. Enter in your credentials into settings.py: `DatasetApp/DatasetApp/project/settings.py under DATABASES`
-4. Repeat steps 5 to 8 in the installation section
+1. Go to the Output page using the navigation bar
+2. Enter in a country, follow the guidelines in the Home page
+3. Select your air quality metric and click Submit
 
 ## Contributing
 
